@@ -39,12 +39,39 @@ if check_qemu_installed():
     #QEMU is installed. So, starting the VM launch function
     vm_launch()
 else :
-    print("The QEMU package is not installed")
-    print("The installation guide is here : https://www.qemu.org/download/ ")
-        
-    is_installed = input("One the installation finished, press the key [Y]: ")
+    print("The QEMU package is not installed") 
+    qemu_request = input("Do you want install QEMU ? [Y/N]")
+    if qemu_request == str("Y") :
+        print("After install, please restart script")
+        print("What's your system ? :")
+        print("[1] : Debian")
+        print("[2] : Arch")
+        os_choice = input("Select your OS : ")
 
-    if is_installed == str("Y"):
-        #Clear the Terminal et restart python script
-        os.system('clear')
-        os.execv(sys.executable, [sys.executable] + sys.argv)
+        if os_choice == "1" :
+            #QEMU installation for Debian
+            command = "sudo apt install qemu-system"
+            try :
+                print("The QEMU installation requires root permissions !! Please enter your password")
+                subprocess.check_call(command, shell=True)
+            except subprocess.CalledProcessError as e :
+                print("Can't install QEMU. Please do it manually")
+                print(f"Error : {e}")
+
+            os.system("clear")
+            print("Installation finished")
+            os.execv(sys.executable, [sys.executable] + sys.argv)
+
+        if os_choice == "2":
+            #QEMU installation for Arch
+            command = "sudo pacman -S qemu-full"
+            try :
+                print("The QEMU installation requires root permissions !! Please enter your password")
+                subprocess.check_call(command, shell=True)
+            except subprocess.CalledProcessError as e :
+                print("Can't install QEMU. Please do it manually")
+                print(f"Error : {e}")
+            
+            os.system("clear")
+            print("Installation finished")
+            os.execv(sys.executable, [sys.executable] + sys.argv)
