@@ -1,11 +1,22 @@
-# QEMU Easy Launch v1.1
-QEMU Easy Launch is a simple project in python to facilate the VM launching with QEMU.
+
+# Qemu Easy Launch 1.1
+
+Qemu Easy Launch is a Python developed program for Linux systems to facilitate the launch of virtual machines with Qemu technology.
 
 
-## Patch Notes
+[![OS - Debian](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
 
-QEMU Easy Launch v1.0 :
-* It's the QEMU Easy Launch first version. Improvements are coming :D !!
+[![Made with Python](https://img.shields.io/badge/Python->=3.6-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
 
-QEMU Easy Launch v1.1 :
-* Adding QEMU installation for Debian and Arch distributions directly in QEMU Easy Launch
+
+
+## Features for current version
+
+- Installation of the Qemu package if not installed
+- Distribution detection: Arch and Debian
+
+
+
+## Installation
+
+For the moment, no installation procedure is available. You can download the Python file and modify it as desired
