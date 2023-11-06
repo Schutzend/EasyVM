@@ -1,10 +1,10 @@
 
-# Qemu Easy Launch 1.1
+# Easy VM 1.0
+Easy VM is a Python developed program for Linux systems to facilitate the launch of virtual machines with Qemu technology.
+This script work on Debian and Arch systems.
 
-Qemu Easy Launch is a Python developed program for Linux systems to facilitate the launch of virtual machines with Qemu technology.
 
-
-[![OS - Debian](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
+[![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
 
 [![Made with Python](https://img.shields.io/badge/Python->=3.6-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
 
@@ -12,8 +12,9 @@ Qemu Easy Launch is a Python developed program for Linux systems to facilitate t
 
 ## Features for current version
 
-- Installation of the Qemu package if not installed
-- Distribution detection: Arch and Debian
+- Create a QCOW2 disk image
+- Launch VM
+- Install QEMU if not installed
 
 
 
